@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box">
+        <lightning-card title="Child to Parent Communication">
+
+            <lightning-card class="slds-m-around_medium" title="Parent Component" icon-name="action:download">
+                <p class="slds-align_absolute-center">Counter Value = {counterValue}</p>
+            </lightning-card>
+
+            <!--Calling Child Component-->
+
+            <c-child-to-parent-child onadd={handleIncrement} onsubtract={handleDecrement}></c-child-to-parent-child>
+
+        </lightning-card>
+    </div>
+</template>
