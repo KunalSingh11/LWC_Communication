@@ -1,0 +1,26 @@
+<template>
+
+    <div class="slds-box">
+
+        <lightning-card title="Parent to Child Component">
+
+            <lightning-card class="slds-m-around_medium" title="Parent Component" icon-name="action:upload">
+
+                <lightning-input class="slds-m-around_small" type="number" value={counterValue}
+                    label="Set Counter Value in Child" min="0" max="100000"
+                    onchange={counterValueHandler}></lightning-input>
+
+                <lightning-button class="slds-align_absolute-center" label="Add 10 to counter value"
+                    onclick={incrementHandler}></lightning-button>
+
+            </lightning-card>
+
+            <!--Calling Child Component-->
+
+            <c-parent-to-child-child counter={counterValue}></c-parent-to-child-child>
+
+        </lightning-card>
+
+    </div>
+
+</template>
